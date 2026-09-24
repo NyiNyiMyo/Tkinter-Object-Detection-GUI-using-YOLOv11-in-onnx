@@ -1,0 +1,16 @@
+for windows,
+
+python -m venv venv
+.\venv\Scripts\activate
+pip install numpy
+pip install opencv-python
+pip install pillow
+pip install onnxruntime-gpu
+
+python -m pip install pyinstaller
+python -m PyInstaller --onefile --windowed yolo_onnx_gui.py
+
+for Linux,
+
+python3 -m pip install pyinstaller
+python3 -m PyInstaller --onefile --windowed yolo_onnx_gui.py
